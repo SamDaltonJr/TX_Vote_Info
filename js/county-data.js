@@ -56,9 +56,10 @@ window.COUNTY_DATA = {
     /* --- Early Voting Schedule --- */
     earlyVotingDates: 'February 17 \u2013 February 27, 2026',
     earlyVotingHours: [
-      { days: 'Tue, Feb 17 (first day)',  hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Mon \u2013 Sat',           hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Sunday, Feb 22',           hours: '11:00 AM \u2013 4:00 PM' }
+      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
+      { days: 'Feb 22 (Sun)',                    hours: '12:00 PM \u2013 6:00 PM' },
+      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
     /* --- Elections Office (for mail ballot applications) --- */
@@ -119,8 +120,10 @@ window.COUNTY_DATA = {
     /* --- Early Voting Schedule --- */
     earlyVotingDates: 'February 17 \u2013 February 27, 2026',
     earlyVotingHours: [
-      { days: 'Mon \u2013 Sat',           hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Sunday, Feb 22',           hours: '11:00 AM \u2013 4:00 PM' }
+      { days: 'Feb 17\u201320 (Tue\u2013Thu)',  hours: '8:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 21 (Fri)',                    hours: '7:00 AM \u2013 7:00 PM' },
+      { days: 'Feb 22 (Sat)',                    hours: '10:00 AM \u2013 4:00 PM' },
+      { days: 'Feb 23\u201327 (Sun\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
     /* --- Elections Office --- */
@@ -181,8 +184,10 @@ window.COUNTY_DATA = {
     /* --- Early Voting Schedule --- */
     earlyVotingDates: 'February 17 \u2013 February 27, 2026',
     earlyVotingHours: [
-      { days: 'Mon \u2013 Sat',           hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Sunday, Feb 22',           hours: '11:00 AM \u2013 4:00 PM' }
+      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
+      { days: 'Feb 22 (Sun)',                    hours: '11:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
     /* --- Elections Office --- */
@@ -243,8 +248,10 @@ window.COUNTY_DATA = {
     /* --- Early Voting Schedule --- */
     earlyVotingDates: 'February 17 \u2013 February 27, 2026',
     earlyVotingHours: [
-      { days: 'Mon \u2013 Sat',           hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Sunday, Feb 22',           hours: '11:00 AM \u2013 4:00 PM' }
+      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
+      { days: 'Feb 22 (Sun)',                    hours: '11:00 AM \u2013 5:00 PM' },
+      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
     /* --- Elections Office --- */

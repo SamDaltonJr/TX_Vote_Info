@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TX Vote Info &mdash; DFW Voting Guide for the 2026 Texas Primary</title>
+  <meta name="description" content="Find your county's voting information for the March 3, 2026 Texas Democratic Primary. Vote centers, registration, IDs, and ballot info for Dallas, Tarrant, Collin, and Denton counties.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="page-landing">
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Alert Bar -->
+  <div class="alert-bar" id="alertBar" data-alert-id="primary-2026-03">
+    <div class="container alert-bar__inner">
+      <span class="alert-bar__icon">&#9888;&#65039;</span>
+      <p class="alert-bar__text">
+        <strong>Texas Primary: March 3, 2026</strong> &mdash;
+        Early voting starts Feb 17!
+      </p>
+      <button class="alert-bar__close" aria-label="Dismiss alert">&times;</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header header--simple" id="siteHeader">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" style="text-decoration:none;">
+        <span class="site-title">TX Vote Info</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="landing-hero">
+      <div class="container">
+        <h1 class="landing-hero__title">Make Your Plan to Vote</h1>
+        <p class="landing-hero__subtitle">Texas Democratic Primary &mdash; March 3, 2026</p>
+        <p class="landing-hero__instruction">Select your county to get personalized voting information.</p>
+      </div>
+    </section>
+
+    <!-- County Selector -->
+    <section class="county-selector">
+      <div class="container">
+        <h2 class="county-selector__heading">Choose Your County</h2>
+        <div class="county-grid">
+          <a href="dallas.html" class="county-card">
+            <span class="county-card__name">Dallas County</span>
+            <span class="county-card__city">Dallas</span>
+          </a>
+          <a href="tarrant.html" class="county-card">
+            <span class="county-card__name">Tarrant County</span>
+            <span class="county-card__city">Fort Worth</span>
+          </a>
+          <a href="collin.html" class="county-card">
+            <span class="county-card__name">Collin County</span>
+            <span class="county-card__city">Plano &bull; McKinney</span>
+          </a>
+          <a href="denton.html" class="county-card">
+            <span class="county-card__name">Denton County</span>
+            <span class="county-card__city">Denton &bull; Lewisville</span>
+          </a>
+        </div>
+        <p class="county-selector__note">
+          Don't see your county? Visit
+          <a href="https://www.votetexas.gov/" target="_blank" rel="noopener noreferrer">VoteTexas.gov</a>
+          for statewide voting resources.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Dates (statewide info) -->
+    <section class="landing-dates">
+      <div class="container">
+        <h2 class="landing-dates__heading">Key Dates</h2>
+        <div class="vote-dates__grid">
+          <div class="vote-date-card" data-date-card="early-voting">
+            <div class="vote-date-card__label">Early Voting</div>
+            <div class="vote-date-card__date">Feb 17 &ndash; Feb 27</div>
+            <div class="vote-date-card__note">Vote at any Vote Center in your county</div>
+            <div class="vote-date-card__status"></div>
+          </div>
+          <div class="vote-date-card" data-date-card="mail-ballot">
+            <div class="vote-date-card__label">Mail Ballot Deadline</div>
+            <div class="vote-date-card__date">Feb 20</div>
+            <div class="vote-date-card__note">Application must be received (not postmarked)</div>
+            <div class="vote-date-card__status"></div>
+          </div>
+          <div class="vote-date-card" data-date-card="election-day">
+            <div class="vote-date-card__label">Election Day</div>
+            <div class="vote-date-card__date">March 3</div>
+            <div class="vote-date-card__note">Polls open 7:00 AM &ndash; 7:00 PM</div>
+            <div class="vote-date-card__status"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer--simple">
+    <div class="container">
+      <p>&copy; 2026 TX Vote Info. A nonpartisan project to help Texans vote.</p>
+      <p class="footer__disclaimer">Not affiliated with any government entity or political party.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

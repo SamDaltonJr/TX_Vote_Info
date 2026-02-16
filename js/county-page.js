@@ -31,21 +31,6 @@
       }
     }
 
-    // Populate key races list
-    var racesContainer = document.querySelector('[data-county-list="keyRaces"]');
-    if (racesContainer && data.keyRaces) {
-      racesContainer.innerHTML = '';
-      for (var j = 0; j < data.keyRaces.length; j++) {
-        var race = data.keyRaces[j];
-        var li = document.createElement('li');
-        var strong = document.createElement('strong');
-        strong.textContent = race.office;
-        li.appendChild(strong);
-        li.appendChild(document.createTextNode(' \u2014 ' + race.note));
-        racesContainer.appendChild(li);
-      }
-    }
-
     // Populate early voting hours table
     var hoursBody = document.querySelector('[data-county-list="earlyVotingHours"]');
     if (hoursBody && data.earlyVotingHours) {

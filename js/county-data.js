@@ -65,34 +65,6 @@ window.COUNTY_DATA = {
     electionsOfficeAddress: 'Dallas County Elections Department\n1460 Round Table Drive\nDallas, TX 75247',
     electionsOfficePhone:   '(214) 819-6300',
 
-    /* --- Key Democratic Primary Races --- */
-    keyRaces: [
-      {
-        office: 'US Congress, District 24',
-        note: 'Help send Beth Van Duyne home \u2014 top Democratic flip target in DFW'
-      },
-      {
-        office: 'US Congress, District 32',
-        note: 'Keep Julie Johnson (D) in office \u2014 flipped blue in 2024'
-      },
-      {
-        office: 'Texas House, District 108',
-        note: 'Park Cities & north Dallas \u2014 key competitive seat'
-      },
-      {
-        office: 'Texas House, Districts 107, 112, 114, 115',
-        note: 'Competitive suburban seats across Dallas County'
-      },
-      {
-        office: 'Governor',
-        note: 'Choose the Democratic candidate for November'
-      },
-      {
-        office: 'County & local races',
-        note: 'These affect your daily life most'
-      }
-    ],
-
     /* --- Quick Resources (prepended on county page) --- */
     quickResources: [
       {
@@ -154,34 +126,6 @@ window.COUNTY_DATA = {
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Tarrant County Elections Administration\n2700 Premier Street\nFort Worth, TX 76111',
     electionsOfficePhone:   '(817) 831-8683',
-
-    /* --- Key Democratic Primary Races --- */
-    keyRaces: [
-      {
-        office: 'US Congress, District 6',
-        note: 'Arlington & southeast Tarrant \u2014 competitive suburban district'
-      },
-      {
-        office: 'US Congress, District 24',
-        note: 'Help send Beth Van Duyne home \u2014 top Democratic flip target in DFW'
-      },
-      {
-        office: 'US Congress, District 12',
-        note: 'Fort Worth area \u2014 Craig Goldman (R) holds this seat'
-      },
-      {
-        office: 'Texas House, Districts 92, 93, 94, 101',
-        note: 'Competitive suburban seats across Tarrant County'
-      },
-      {
-        office: 'Governor',
-        note: 'Choose the Democratic candidate for November'
-      },
-      {
-        office: 'County & local races',
-        note: 'These affect your daily life most'
-      }
-    ],
 
     /* --- Quick Resources --- */
     quickResources: [
@@ -245,30 +189,6 @@ window.COUNTY_DATA = {
     electionsOfficeAddress: 'Collin County Elections\n2010 Redbud Blvd, Suite 102\nMcKinney, TX 75069',
     electionsOfficePhone:   '(972) 424-1460',
 
-    /* --- Key Democratic Primary Races --- */
-    keyRaces: [
-      {
-        office: 'US Congress, District 3',
-        note: 'Plano, McKinney, Allen, Frisco \u2014 growing Democratic opportunity against Keith Self (R)'
-      },
-      {
-        office: 'US Congress, District 32',
-        note: 'Keep Julie Johnson (D) in office \u2014 Richardson & parts of Plano, flipped blue in 2024'
-      },
-      {
-        office: 'Texas House, Districts 66, 67, 70',
-        note: 'Competitive suburban seats across Collin County'
-      },
-      {
-        office: 'Governor',
-        note: 'Choose the Democratic candidate for November'
-      },
-      {
-        office: 'County & local races',
-        note: 'These affect your daily life most'
-      }
-    ],
-
     /* --- Quick Resources --- */
     quickResources: [
       {
@@ -330,34 +250,6 @@ window.COUNTY_DATA = {
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Denton County Elections\n701 Kimberly Drive, Suite A101\nDenton, TX 76208',
     electionsOfficePhone:   '(940) 349-3200',
-
-    /* --- Key Democratic Primary Races --- */
-    keyRaces: [
-      {
-        office: 'US Congress, District 24',
-        note: 'Help send Beth Van Duyne home \u2014 top Democratic flip target in DFW'
-      },
-      {
-        office: 'US Congress, District 26',
-        note: 'Open seat \u2014 Michael Burgess (R) retired'
-      },
-      {
-        office: 'Texas House, District 65',
-        note: 'Carrollton & Lewisville \u2014 Democratic pickup opportunity'
-      },
-      {
-        office: 'Texas House, Districts 63, 64',
-        note: 'Flower Mound, Denton city \u2014 competitive suburban seats'
-      },
-      {
-        office: 'Governor',
-        note: 'Choose the Democratic candidate for November'
-      },
-      {
-        office: 'County & local races',
-        note: 'These affect your daily life most'
-      }
-    ],
 
     /* --- Quick Resources --- */
     quickResources: [

@@ -7,7 +7,7 @@
    - County election website base URLs confirmed from user + public records
    - Congressional districts reflect 2021 redistricting (effective 2023-2032)
    - Texas House/Senate districts reflect 2021 redistricting
-   - Early voting dates: Feb 17-28, 2026 per Texas Election Code
+   - Early voting dates: Feb 17-27, 2026 per Texas Election Code
    - Election Day: March 3, 2026
    - Mail ballot application deadline: received by Feb 20, 2026
    - Vote center counts based on recent primary elections;
@@ -40,10 +40,10 @@ window.COUNTY_DATA = {
     electionWebsite:      'https://www.dallascountyvotes.org',
     electionWebsiteLabel: 'dallascountyvotes.org',
 
-    voteCenterFinderUrl:   'https://www.dallascountyvotes.org/vote-centers/',
+    voteCenterFinderUrl:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
     voteCenterFinderLabel: 'Find a Vote Center',
 
-    earlyVotingUrl:   'https://www.dallascountyvotes.org/early-voting/',
+    earlyVotingUrl:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
     earlyVotingLabel: 'Early Voting Locations & Hours',
 
     electionInfoUrl:   'https://www.dallascountyvotes.org/voters/election/',
@@ -70,19 +70,19 @@ window.COUNTY_DATA = {
       {
         icon: '\uD83D\uDCCD',
         label: 'Dallas Vote Center Finder',
-        url:   'https://www.dallascountyvotes.org/vote-centers/',
+        url:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
         source: 'dallascountyvotes.org'
       },
       {
         icon: '\uD83D\uDD50',
-        label: 'Early Voting Hours & Locations',
-        url:   'https://www.dallascountyvotes.org/early-voting/',
+        label: 'Early Voting Locations & Hours',
+        url:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
         source: 'dallascountyvotes.org'
       },
       {
         icon: '\uD83D\uDCCB',
         label: 'Sample Ballot Lookup',
-        url:   'https://www.dallascountyvotes.org/ballot-information/',
+        url:   'https://www.dallascountyvotes.org/voters/ballot/',
         source: 'dallascountyvotes.org'
       }
     ]
@@ -100,16 +100,16 @@ window.COUNTY_DATA = {
     countySlug: 'tarrant',
 
     /* --- Official URLs --- */
-    electionWebsite:      'https://www.tarrantcounty.com/en/elections.html',
-    electionWebsiteLabel: 'tarrantcounty.com/elections',
+    electionWebsite:      'https://www.tarrantcountytx.gov/en/elections.html',
+    electionWebsiteLabel: 'tarrantcountytx.gov/elections',
 
-    voteCenterFinderUrl:   'https://www.tarrantcounty.com/en/elections/Polling-Locations.html',
+    voteCenterFinderUrl:   'https://gisit.tarrantcounty.com/TCVL/',
     voteCenterFinderLabel: 'Find Your Polling Location',
 
-    earlyVotingUrl:   'https://www.tarrantcounty.com/en/elections/Early-Voting.html',
-    earlyVotingLabel: 'Early Voting Locations & Hours',
+    earlyVotingUrl:   'https://gisit.tarrantcounty.com/tcvotingwaittime/',
+    earlyVotingLabel: 'Early Voting Locations & Wait Times',
 
-    electionInfoUrl:   'https://www.tarrantcounty.com/en/elections/Current-Elections.html',
+    electionInfoUrl:   'https://www.tarrantcountytx.gov/en/elections/current-election-information.html',
     electionInfoLabel: 'Current Election Info',
 
     /* --- Vote Centers --- */
@@ -131,21 +131,21 @@ window.COUNTY_DATA = {
     quickResources: [
       {
         icon: '\uD83D\uDCCD',
-        label: 'Tarrant Polling Place Locator',
-        url:   'https://www.tarrantcounty.com/en/elections/Polling-Locations.html',
-        source: 'tarrantcounty.com'
+        label: 'Tarrant Voter Lookup & Polling Locator',
+        url:   'https://gisit.tarrantcounty.com/TCVL/',
+        source: 'tarrantcountytx.gov'
       },
       {
         icon: '\uD83D\uDD50',
-        label: 'Early Voting Hours & Locations',
-        url:   'https://www.tarrantcounty.com/en/elections/Early-Voting.html',
-        source: 'tarrantcounty.com'
+        label: 'Early Voting Locations & Wait Times',
+        url:   'https://gisit.tarrantcounty.com/tcvotingwaittime/',
+        source: 'tarrantcountytx.gov'
       },
       {
         icon: '\uD83D\uDCCB',
-        label: 'Sample Ballot',
-        url:   'https://www.tarrantcounty.com/en/elections/Sample-Ballots.html',
-        source: 'tarrantcounty.com'
+        label: 'Sample Ballot Lookup',
+        url:   'https://gisit.tarrantcounty.com/TCVL/',
+        source: 'tarrantcountytx.gov'
       }
     ]
   },
@@ -168,11 +168,11 @@ window.COUNTY_DATA = {
     voteCenterFinderUrl:   'https://www.collincountytx.gov/elections/polling-locations',
     voteCenterFinderLabel: 'Find Your Polling Location',
 
-    earlyVotingUrl:   'https://www.collincountytx.gov/elections/early-voting',
-    earlyVotingLabel: 'Early Voting Locations & Hours',
+    earlyVotingUrl:   'https://www.collincountytx.gov/elections/polling-locations',
+    earlyVotingLabel: 'Early Voting & Polling Locations',
 
-    electionInfoUrl:   'https://www.collincountytx.gov/elections/current-election',
-    electionInfoLabel: 'Current Election Info',
+    electionInfoUrl:   'https://www.collincountytx.gov/elections/election-information',
+    electionInfoLabel: 'Election Information',
 
     /* --- Vote Centers --- */
     voteCenterCount: 40,
@@ -199,8 +199,8 @@ window.COUNTY_DATA = {
       },
       {
         icon: '\uD83D\uDD50',
-        label: 'Early Voting Hours & Locations',
-        url:   'https://www.collincountytx.gov/elections/early-voting',
+        label: 'Early Voting & Polling Locations',
+        url:   'https://www.collincountytx.gov/elections/polling-locations',
         source: 'collincountytx.gov'
       },
       {
@@ -227,13 +227,13 @@ window.COUNTY_DATA = {
     electionWebsite:      'https://www.votedenton.gov',
     electionWebsiteLabel: 'votedenton.gov',
 
-    voteCenterFinderUrl:   'https://www.votedenton.gov/polling-locations/',
+    voteCenterFinderUrl:   'https://www.votedenton.gov/voter-information/voter-lookup/',
     voteCenterFinderLabel: 'Find Your Polling Location',
 
-    earlyVotingUrl:   'https://www.votedenton.gov/early-voting/',
+    earlyVotingUrl:   'https://www.votedenton.gov/early-voting-information/early-voting-in-person/',
     earlyVotingLabel: 'Early Voting Locations & Hours',
 
-    electionInfoUrl:   'https://www.votedenton.gov/current-election/',
+    electionInfoUrl:   'https://www.votedenton.gov/election-day-information/current-and-upcoming-election-information/',
     electionInfoLabel: 'Current Election Info',
 
     /* --- Vote Centers --- */
@@ -255,20 +255,20 @@ window.COUNTY_DATA = {
     quickResources: [
       {
         icon: '\uD83D\uDCCD',
-        label: 'Denton County Polling Locator',
-        url:   'https://www.votedenton.gov/polling-locations/',
+        label: 'Denton County Voter Lookup',
+        url:   'https://www.votedenton.gov/voter-information/voter-lookup/',
         source: 'votedenton.gov'
       },
       {
         icon: '\uD83D\uDD50',
-        label: 'Early Voting Hours & Locations',
-        url:   'https://www.votedenton.gov/early-voting/',
+        label: 'Early Voting Locations & Hours',
+        url:   'https://www.votedenton.gov/early-voting-information/early-voting-in-person/',
         source: 'votedenton.gov'
       },
       {
         icon: '\uD83D\uDCCB',
-        label: 'Sample Ballot',
-        url:   'https://www.votedenton.gov/sample-ballots/',
+        label: 'Sample Ballot Lookup',
+        url:   'https://www.votedenton.gov/voter-information/voter-lookup/#VoterEligibilitySearch',
         source: 'votedenton.gov'
       }
     ]

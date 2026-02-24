@@ -62,6 +62,15 @@ window.COUNTY_DATA = {
       { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
+    /* --- Election Day (March 3, 2026) --- */
+    electionDayModel: 'assignedPrecinct',
+    electionDayNote: 'You must vote at your assigned precinct polling location. Democratic and Republican primaries are at <strong>separate locations</strong> this year.',
+    electionDayDemNote: 'Look up your <strong>Democratic primary</strong> polling place to find the correct location for your precinct.',
+    electionDayFinderUrl: 'https://www.dallascountyvotes.org/voters/election/',
+    electionDayFinderLabel: 'Find My Election Day Polling Place',
+    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayLocationCount: '280+ Democratic',
+
     /* --- Elections Office (for mail ballot applications) --- */
     electionsOfficeAddress: 'Dallas County Elections Department\n1460 Round Table Drive\nDallas, TX 75247',
     electionsOfficePhone:   '(214) 819-6300',
@@ -125,6 +134,15 @@ window.COUNTY_DATA = {
       { days: 'Feb 22 (Sun)',                    hours: '10:00 AM \u2013 4:00 PM' },
       { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
+
+    /* --- Election Day (March 3, 2026) --- */
+    electionDayModel: 'voteCenters',
+    electionDayNote: 'You can vote at <strong>any Tarrant County Vote Center</strong> on Election Day \u2014 same as early voting.',
+    electionDayDemNote: 'Both Democratic and Republican voters go to the same vote center locations. Choose your party\u2019s ballot when you arrive.',
+    electionDayFinderUrl: 'https://gisit.tarrantcounty.com/TCVL/',
+    electionDayFinderLabel: 'Find a Vote Center Near Me',
+    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayLocationCount: null,
 
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Tarrant County Elections Administration\n2700 Premier Street\nFort Worth, TX 76111',
@@ -190,6 +208,15 @@ window.COUNTY_DATA = {
       { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
 
+    /* --- Election Day (March 3, 2026) --- */
+    electionDayModel: 'voteCenters',
+    electionDayNote: 'You can vote at <strong>any Collin County Vote Center</strong> on Election Day \u2014 same as early voting.',
+    electionDayDemNote: 'Both Democratic and Republican voters go to the same vote center locations. Choose your party\u2019s ballot when you arrive.',
+    electionDayFinderUrl: 'https://www.collincountytx.gov/elections/polling-locations',
+    electionDayFinderLabel: 'Find a Vote Center Near Me',
+    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayLocationCount: '86',
+
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Collin County Elections\n2010 Redbud Blvd, Suite 102\nMcKinney, TX 75069',
     electionsOfficePhone:   '(972) 424-1460',
@@ -253,6 +280,15 @@ window.COUNTY_DATA = {
       { days: 'Feb 22 (Sun)',                    hours: '11:00 AM \u2013 5:00 PM' },
       { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
     ],
+
+    /* --- Election Day (March 3, 2026) --- */
+    electionDayModel: 'assignedPrecinct',
+    electionDayNote: 'You must vote at your assigned precinct polling location. Democratic and Republican primaries are at <strong>separate locations</strong>.',
+    electionDayDemNote: 'Look up your <strong>Democratic primary</strong> polling place to find the correct location for your precinct.',
+    electionDayFinderUrl: 'https://www.votedenton.gov/voter-information/voter-lookup/',
+    electionDayFinderLabel: 'Find My Election Day Polling Place',
+    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayLocationCount: null,
 
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Denton County Elections\n701 Kimberly Drive, Suite A101\nDenton, TX 76208',

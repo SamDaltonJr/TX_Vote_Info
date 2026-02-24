@@ -203,6 +203,76 @@
     });
   }
 
+  /* --- Dynamic Alert Bar Based on Current Date --- */
+  function initDynamicAlert() {
+    var alertBar = document.getElementById('alertBar');
+    if (!alertBar) return;
+
+    var textEl = alertBar.querySelector('.alert-bar__text');
+    if (!textEl) return;
+
+    // Key dates
+    var earlyVotingStart = new Date(2026, 1, 17); // Feb 17
+    var earlyVotingEnd   = new Date(2026, 1, 27); // Feb 27
+    var electionDay      = new Date(2026, 2, 3);  // March 3
+    var runoffDay        = new Date(2026, 4, 26); // May 26
+
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    var phase;
+    var message;
+
+    if (today < earlyVotingStart) {
+      phase = 'pre-early';
+      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Early voting starts Feb 17!';
+    } else if (today <= earlyVotingEnd) {
+      phase = 'early-voting';
+      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Early voting is underway through Feb 27!';
+    } else if (today < electionDay) {
+      phase = 'pre-eday';
+      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Election Day is March 3 &mdash; find your polling place!';
+    } else if (today.getTime() === electionDay.getTime()) {
+      phase = 'election-day';
+      message = '<strong>Election Day is TODAY!</strong> Polls are open 7:00 AM &ndash; 7:00 PM. Go vote!';
+    } else if (today < runoffDay) {
+      phase = 'pre-runoff';
+      message = '<strong>Runoff Elections: May 26, 2026</strong> &mdash; Check if your races have a runoff!';
+    } else if (today.getTime() === runoffDay.getTime()) {
+      phase = 'runoff-day';
+      message = '<strong>Runoff Election Day is TODAY!</strong> Polls are open 7:00 AM &ndash; 7:00 PM.';
+    } else {
+      // After runoff — hide alert
+      alertBar.classList.add('is-hidden');
+      return;
+    }
+
+    textEl.innerHTML = message;
+
+    // Update alert ID so dismiss resets when phase changes
+    var phaseAlertId = 'primary-2026-' + phase;
+    alertBar.setAttribute('data-alert-id', phaseAlertId);
+
+    // Re-check dismissal with phase-specific key
+    var storageKey = 'txvoteinfo-alert-dismissed-' + phaseAlertId;
+    if (localStorage.getItem(storageKey) === 'true') {
+      alertBar.classList.add('is-hidden');
+    } else {
+      alertBar.classList.remove('is-hidden');
+    }
+
+    // Re-bind close button with correct key
+    var closeBtn = alertBar.querySelector('.alert-bar__close');
+    if (closeBtn) {
+      var newClose = closeBtn.cloneNode(true);
+      closeBtn.parentNode.replaceChild(newClose, closeBtn);
+      newClose.addEventListener('click', function() {
+        alertBar.classList.add('is-hidden');
+        localStorage.setItem(storageKey, 'true');
+      });
+    }
+  }
+
   /* --- Live Date Tracking for Voting Period Cards --- */
   function initDateCards() {
     var cards = document.querySelectorAll('[data-date-card]');
@@ -288,7 +358,7 @@
 
   /* --- Initialize Everything --- */
   document.addEventListener('DOMContentLoaded', function() {
-    initAlertBar();
+    initDynamicAlert();
     initMobileNav();
     initStickyHeader();
     initActiveNav();

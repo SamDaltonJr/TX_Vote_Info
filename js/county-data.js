@@ -1,27 +1,27 @@
 /* ============================================
    TX VOTE INFO - County Election Data
-   March 3, 2026 Texas Democratic Primary
+   May 26, 2026 Texas Democratic Primary Runoff
    ============================================
 
    DATA SOURCES & ACCURACY NOTES:
-   - County election website base URLs confirmed from user + public records
-   - Congressional districts reflect 2021 redistricting (effective 2023-2032)
-   - Texas House/Senate districts reflect 2021 redistricting
-   - Early voting dates: Feb 17-27, 2026 per Texas Election Code
-   - Election Day: March 3, 2026
-   - Mail ballot application deadline: received by Feb 20, 2026
-   - Vote center counts based on recent primary elections;
-     counties finalize exact counts ~30 days before each election
-   - Elections office addresses from public county records
+   - County election website base URLs confirmed from public records
+   - Early voting dates: May 18-22, 2026 per Texas Election Code
+     (10th day before through 4th day before, weekdays only for runoffs)
+   - Election Day: May 26, 2026
+   - Mail ballot application deadline: received by May 15, 2026 (PAST)
+   - Voter registration deadline: April 26, 2026 (PAST)
+   - Eligibility: Voters who voted in the March 3 REPUBLICAN primary
+     CANNOT vote in the Democratic primary runoff. Voters who voted
+     Democratic in March OR didn't vote in March may vote.
+   - Vote center counts confirmed from each county's official runoff
+     PDF / public announcements (May 2026)
 
-   VERIFY BEFORE PUBLISHING:
-   1. Exact number of early voting / Election Day vote centers
-   2. Extended or reduced hours for specific dates (first week is
-      sometimes shorter in some counties)
-   3. Sunday voting hours (varies by county and election)
-   4. Sub-page URL paths on each county website (may change
-      between election cycles)
-   5. Current incumbents and candidate filings
+   PRIMARY → RUNOFF CHANGES:
+   - Dallas County: switched to vote center model for Election Day
+     (both parties agreed to countywide voting for the runoff)
+   - Tarrant, Collin: same vote-center model as primary
+   - Denton: still uses assigned precincts on Election Day with
+     separate Dem and Rep sites
    ============================================ */
 
 window.COUNTY_DATA = {
@@ -30,6 +30,7 @@ window.COUNTY_DATA = {
      DALLAS COUNTY
      Population: ~2.6 million | Registered voters: ~1.4 million
      Leans Democratic countywide
+     74 early voting vote centers (confirmed via official PDF)
      ────────────────────────────────────────── */
   dallas: {
     name: 'Dallas',
@@ -46,30 +47,27 @@ window.COUNTY_DATA = {
     earlyVotingUrl:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
     earlyVotingLabel: 'Early Voting Locations & Hours',
 
-    electionInfoUrl:   'https://www.dallascountyvotes.org/voters/election/',
-    electionInfoLabel: 'Current Election Info',
+    electionInfoUrl:   'https://www.dallascountyvotes.org/voters/election/may-26-2026-primary-runoff-election/',
+    electionInfoLabel: 'Runoff Election Info',
 
     /* --- Vote Centers --- */
     voteCenterCount: 74,
     voteCenterNote:  'Vote at ANY Dallas County Vote Center during early voting',
 
     /* --- Early Voting Schedule --- */
-    earlyVotingDates: 'February 17 \u2013 February 27, 2026',
+    earlyVotingDates: 'May 18 – May 22, 2026',
     earlyVotingHours: [
-      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Feb 22 (Sun)',                    hours: '12:00 PM \u2013 6:00 PM' },
-      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
+      { days: 'May 18–22 (Mon–Fri)', hours: '7:00 AM – 7:00 PM' }
     ],
 
-    /* --- Election Day (March 3, 2026) --- */
-    electionDayModel: 'assignedPrecinct',
-    electionDayNote: 'You must vote at your assigned precinct polling location. Democratic and Republican primaries are at <strong>separate locations</strong> this year.',
-    electionDayDemNote: 'Look up your <strong>Democratic primary</strong> polling place to find the correct location for your precinct.',
-    electionDayFinderUrl: 'https://www.dallascountyvotes.org/voters/election/',
-    electionDayFinderLabel: 'Find My Election Day Polling Place',
-    electionDayHours: '7:00 AM \u2013 7:00 PM',
-    electionDayLocationCount: '280+ Democratic',
+    /* --- Election Day (May 26, 2026) --- */
+    electionDayModel: 'voteCenters',
+    electionDayNote: 'You can vote at <strong>any Dallas County Vote Center</strong> on Election Day — both parties agreed to countywide voting for the runoff.',
+    electionDayDemNote: 'Choose the <strong>Democratic runoff ballot</strong> when you arrive. (You cannot vote in the Democratic runoff if you voted in the Republican primary on March 3.)',
+    electionDayFinderUrl: 'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
+    electionDayFinderLabel: 'Find a Vote Center Near Me',
+    electionDayHours: '7:00 AM – 7:00 PM',
+    electionDayLocationCount: null,
 
     /* --- Elections Office (for mail ballot applications) --- */
     electionsOfficeAddress: 'Dallas County Elections Department\n1460 Round Table Drive\nDallas, TX 75247',
@@ -78,19 +76,19 @@ window.COUNTY_DATA = {
     /* --- Quick Resources (prepended on county page) --- */
     quickResources: [
       {
-        icon: '\uD83D\uDCCD',
+        icon: '📍',
         label: 'Dallas Vote Center Finder',
         url:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
         source: 'dallascountyvotes.org'
       },
       {
-        icon: '\uD83D\uDD50',
-        label: 'Early Voting Locations & Hours',
-        url:   'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
+        icon: '🕐',
+        label: 'Runoff Early Voting Info',
+        url:   'https://www.dallascountyvotes.org/voters/election/may-26-2026-primary-runoff-election/',
         source: 'dallascountyvotes.org'
       },
       {
-        icon: '\uD83D\uDCCB',
+        icon: '📋',
         label: 'Sample Ballot Lookup',
         url:   'https://www.dallascountyvotes.org/voters/ballot/',
         source: 'dallascountyvotes.org'
@@ -103,6 +101,7 @@ window.COUNTY_DATA = {
      TARRANT COUNTY
      Population: ~2.1 million | Registered voters: ~1.2 million
      Competitive / purple county
+     37 early voting vote centers (confirmed via official PDF)
      ────────────────────────────────────────── */
   tarrant: {
     name: 'Tarrant',
@@ -123,25 +122,22 @@ window.COUNTY_DATA = {
     electionInfoLabel: 'Current Election Info',
 
     /* --- Vote Centers --- */
-    voteCenterCount: 50,
+    voteCenterCount: 37,
     voteCenterNote:  'Vote at ANY Tarrant County location during early voting',
 
     /* --- Early Voting Schedule --- */
-    earlyVotingDates: 'February 17 \u2013 February 27, 2026',
+    earlyVotingDates: 'May 18 – May 22, 2026',
     earlyVotingHours: [
-      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Feb 22 (Sun)',                    hours: '10:00 AM \u2013 4:00 PM' },
-      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
+      { days: 'May 18–22 (Mon–Fri)', hours: '7:00 AM – 7:00 PM' }
     ],
 
-    /* --- Election Day (March 3, 2026) --- */
+    /* --- Election Day (May 26, 2026) --- */
     electionDayModel: 'voteCenters',
-    electionDayNote: 'You can vote at <strong>any Tarrant County Vote Center</strong> on Election Day \u2014 same as early voting.',
-    electionDayDemNote: 'Both Democratic and Republican voters go to the same vote center locations. Choose your party\u2019s ballot when you arrive.',
+    electionDayNote: 'You can vote at <strong>any Tarrant County Vote Center</strong> on Election Day — same as early voting.',
+    electionDayDemNote: 'Both parties’ runoffs use the same locations. Ask for the <strong>Democratic runoff ballot</strong>. (You cannot vote in the Democratic runoff if you voted in the Republican primary on March 3.)',
     electionDayFinderUrl: 'https://gisit.tarrantcounty.com/TCVL/',
     electionDayFinderLabel: 'Find a Vote Center Near Me',
-    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayHours: '7:00 AM – 7:00 PM',
     electionDayLocationCount: null,
 
     /* --- Elections Office --- */
@@ -151,19 +147,19 @@ window.COUNTY_DATA = {
     /* --- Quick Resources --- */
     quickResources: [
       {
-        icon: '\uD83D\uDCCD',
+        icon: '📍',
         label: 'Tarrant Voter Lookup & Polling Locator',
         url:   'https://gisit.tarrantcounty.com/TCVL/',
         source: 'tarrantcountytx.gov'
       },
       {
-        icon: '\uD83D\uDD50',
+        icon: '🕐',
         label: 'Early Voting Locations & Wait Times',
         url:   'https://gisit.tarrantcounty.com/tcvotingwaittime/',
         source: 'tarrantcountytx.gov'
       },
       {
-        icon: '\uD83D\uDCCB',
+        icon: '📋',
         label: 'Sample Ballot Lookup',
         url:   'https://gisit.tarrantcounty.com/TCVL/',
         source: 'tarrantcountytx.gov'
@@ -176,6 +172,7 @@ window.COUNTY_DATA = {
      COLLIN COUNTY
      Population: ~1.2 million | Registered voters: ~700,000
      Leans Republican but trending competitive
+     38 early voting vote centers
      ────────────────────────────────────────── */
   collin: {
     name: 'Collin',
@@ -192,51 +189,48 @@ window.COUNTY_DATA = {
     earlyVotingUrl:   'https://www.collincountytx.gov/elections/polling-locations',
     earlyVotingLabel: 'Early Voting & Polling Locations',
 
-    electionInfoUrl:   'https://www.collincountytx.gov/elections/election-information',
+    electionInfoUrl:   'https://www.collincountytx.gov/elections/details',
     electionInfoLabel: 'Election Information',
 
     /* --- Vote Centers --- */
-    voteCenterCount: 40,
+    voteCenterCount: 38,
     voteCenterNote:  'Vote at ANY Collin County Vote Center during early voting',
 
     /* --- Early Voting Schedule --- */
-    earlyVotingDates: 'February 17 \u2013 February 27, 2026',
+    earlyVotingDates: 'May 18 – May 22, 2026',
     earlyVotingHours: [
-      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Feb 22 (Sun)',                    hours: '11:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
+      { days: 'May 18–22 (Mon–Fri)', hours: '7:00 AM – 7:00 PM' }
     ],
 
-    /* --- Election Day (March 3, 2026) --- */
+    /* --- Election Day (May 26, 2026) --- */
     electionDayModel: 'voteCenters',
-    electionDayNote: 'You can vote at <strong>any Collin County Vote Center</strong> on Election Day \u2014 same as early voting.',
-    electionDayDemNote: 'Both Democratic and Republican voters go to the same vote center locations. Choose your party\u2019s ballot when you arrive.',
+    electionDayNote: 'You can vote at <strong>any Collin County Vote Center</strong> on Election Day — same as early voting.',
+    electionDayDemNote: 'Both parties’ runoffs use the same locations. Ask for the <strong>Democratic runoff ballot</strong>. (You cannot vote in the Democratic runoff if you voted in the Republican primary on March 3.)',
     electionDayFinderUrl: 'https://www.collincountytx.gov/elections/polling-locations',
     electionDayFinderLabel: 'Find a Vote Center Near Me',
-    electionDayHours: '7:00 AM \u2013 7:00 PM',
-    electionDayLocationCount: '86',
+    electionDayHours: '7:00 AM – 7:00 PM',
+    electionDayLocationCount: null,
 
     /* --- Elections Office --- */
     electionsOfficeAddress: 'Collin County Elections\n2010 Redbud Blvd, Suite 102\nMcKinney, TX 75069',
-    electionsOfficePhone:   '(972) 424-1460',
+    electionsOfficePhone:   '(972) 547-1990',
 
     /* --- Quick Resources --- */
     quickResources: [
       {
-        icon: '\uD83D\uDCCD',
+        icon: '📍',
         label: 'Collin County Polling Locator',
         url:   'https://www.collincountytx.gov/elections/polling-locations',
         source: 'collincountytx.gov'
       },
       {
-        icon: '\uD83D\uDD50',
+        icon: '🕐',
         label: 'Early Voting & Polling Locations',
         url:   'https://www.collincountytx.gov/elections/polling-locations',
         source: 'collincountytx.gov'
       },
       {
-        icon: '\uD83D\uDCCB',
+        icon: '📋',
         label: 'Sample Ballot',
         url:   'https://www.collincountytx.gov/elections/sample-ballots',
         source: 'collincountytx.gov'
@@ -249,6 +243,9 @@ window.COUNTY_DATA = {
      DENTON COUNTY
      Population: ~1.0 million | Registered voters: ~600,000
      Leans Republican but south Denton trending competitive
+     45 early voting vote centers
+     Election Day: still uses assigned precincts with separate
+     Democratic and Republican runoff sites
      ────────────────────────────────────────── */
   denton: {
     name: 'Denton',
@@ -269,25 +266,22 @@ window.COUNTY_DATA = {
     electionInfoLabel: 'Current Election Info',
 
     /* --- Vote Centers --- */
-    voteCenterCount: 42,
+    voteCenterCount: 45,
     voteCenterNote:  'Vote at ANY Denton County Vote Center during early voting',
 
     /* --- Early Voting Schedule --- */
-    earlyVotingDates: 'February 17 \u2013 February 27, 2026',
+    earlyVotingDates: 'May 18 – May 22, 2026',
     earlyVotingHours: [
-      { days: 'Feb 17\u201320 (Tue\u2013Fri)',  hours: '8:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 21 (Sat)',                    hours: '7:00 AM \u2013 7:00 PM' },
-      { days: 'Feb 22 (Sun)',                    hours: '11:00 AM \u2013 5:00 PM' },
-      { days: 'Feb 23\u201327 (Mon\u2013Fri)',   hours: '7:00 AM \u2013 7:00 PM' }
+      { days: 'May 18–22 (Mon–Fri)', hours: '7:00 AM – 7:00 PM' }
     ],
 
-    /* --- Election Day (March 3, 2026) --- */
+    /* --- Election Day (May 26, 2026) --- */
     electionDayModel: 'assignedPrecinct',
-    electionDayNote: 'You must vote at your assigned precinct polling location. Democratic and Republican primaries are at <strong>separate locations</strong>.',
-    electionDayDemNote: 'Look up your <strong>Democratic primary</strong> polling place to find the correct location for your precinct.',
+    electionDayNote: 'You must vote at your assigned precinct polling location. Democratic and Republican runoffs are at <strong>separate locations</strong>.',
+    electionDayDemNote: 'Look up your <strong>Democratic runoff</strong> polling place for your precinct. (You cannot vote in the Democratic runoff if you voted in the Republican primary on March 3.)',
     electionDayFinderUrl: 'https://www.votedenton.gov/voter-information/voter-lookup/',
     electionDayFinderLabel: 'Find My Election Day Polling Place',
-    electionDayHours: '7:00 AM \u2013 7:00 PM',
+    electionDayHours: '7:00 AM – 7:00 PM',
     electionDayLocationCount: null,
 
     /* --- Elections Office --- */
@@ -297,19 +291,19 @@ window.COUNTY_DATA = {
     /* --- Quick Resources --- */
     quickResources: [
       {
-        icon: '\uD83D\uDCCD',
+        icon: '📍',
         label: 'Denton County Voter Lookup',
         url:   'https://www.votedenton.gov/voter-information/voter-lookup/',
         source: 'votedenton.gov'
       },
       {
-        icon: '\uD83D\uDD50',
+        icon: '🕐',
         label: 'Early Voting Locations & Hours',
         url:   'https://www.votedenton.gov/early-voting-information/early-voting-in-person/',
         source: 'votedenton.gov'
       },
       {
-        icon: '\uD83D\uDCCB',
+        icon: '📋',
         label: 'Sample Ballot Lookup',
         url:   'https://www.votedenton.gov/voter-information/voter-lookup/#VoterEligibilitySearch',
         source: 'votedenton.gov'

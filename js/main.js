@@ -211,10 +211,9 @@
     var textEl = alertBar.querySelector('.alert-bar__text');
     if (!textEl) return;
 
-    // Key dates
-    var earlyVotingStart = new Date(2026, 1, 17); // Feb 17
-    var earlyVotingEnd   = new Date(2026, 1, 27); // Feb 27
-    var electionDay      = new Date(2026, 2, 3);  // March 3
+    // Runoff key dates
+    var earlyVotingStart = new Date(2026, 4, 18); // May 18
+    var earlyVotingEnd   = new Date(2026, 4, 22); // May 22 (last day)
     var runoffDay        = new Date(2026, 4, 26); // May 26
 
     var now = new Date();
@@ -225,22 +224,16 @@
 
     if (today < earlyVotingStart) {
       phase = 'pre-early';
-      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Early voting starts Feb 17!';
+      message = '<strong>Texas Primary Runoff: May 26, 2026</strong> &mdash; Early voting starts May 18!';
     } else if (today <= earlyVotingEnd) {
       phase = 'early-voting';
-      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Early voting is underway through Feb 27!';
-    } else if (today < electionDay) {
-      phase = 'pre-eday';
-      message = '<strong>Texas Primary: March 3, 2026</strong> &mdash; Election Day is March 3 &mdash; find your polling place!';
-    } else if (today.getTime() === electionDay.getTime()) {
-      phase = 'election-day';
-      message = '<strong>Election Day is TODAY!</strong> Polls are open 7:00 AM &ndash; 7:00 PM. Go vote!';
+      message = '<strong>Texas Primary Runoff: May 26, 2026</strong> &mdash; Early voting is underway through May 22!';
     } else if (today < runoffDay) {
-      phase = 'pre-runoff';
-      message = '<strong>Runoff Elections: May 26, 2026</strong> &mdash; Check if your races have a runoff!';
+      phase = 'pre-eday';
+      message = '<strong>Texas Primary Runoff: May 26, 2026</strong> &mdash; Election Day is May 26 &mdash; find your polling place!';
     } else if (today.getTime() === runoffDay.getTime()) {
       phase = 'runoff-day';
-      message = '<strong>Runoff Election Day is TODAY!</strong> Polls are open 7:00 AM &ndash; 7:00 PM.';
+      message = '<strong>Runoff Election Day is TODAY!</strong> Polls are open 7:00 AM &ndash; 7:00 PM. Go vote!';
     } else {
       // After runoff — hide alert
       alertBar.classList.add('is-hidden');
@@ -250,7 +243,7 @@
     textEl.innerHTML = message;
 
     // Update alert ID so dismiss resets when phase changes
-    var phaseAlertId = 'primary-2026-' + phase;
+    var phaseAlertId = 'runoff-2026-' + phase;
     alertBar.setAttribute('data-alert-id', phaseAlertId);
 
     // Re-check dismissal with phase-specific key
@@ -278,11 +271,11 @@
     var cards = document.querySelectorAll('[data-date-card]');
     if (!cards.length) return;
 
-    // Key dates for the March 3, 2026 Texas Primary
-    var earlyVotingStart = new Date(2026, 1, 17); // Feb 17
-    var earlyVotingEnd   = new Date(2026, 1, 27); // Feb 27 (last day)
-    var mailDeadline     = new Date(2026, 1, 20); // Feb 20
-    var electionDay      = new Date(2026, 2, 3);  // March 3
+    // Key dates for the May 26, 2026 Texas Primary Runoff
+    var earlyVotingStart = new Date(2026, 4, 18); // May 18
+    var earlyVotingEnd   = new Date(2026, 4, 22); // May 22 (last day)
+    var mailDeadline     = new Date(2026, 4, 15); // May 15
+    var electionDay      = new Date(2026, 4, 26); // May 26
 
     // Get today at midnight for clean date comparison
     var now = new Date();

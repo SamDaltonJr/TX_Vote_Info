@@ -62,12 +62,12 @@ window.COUNTY_DATA = {
 
     /* --- Election Day (May 26, 2026) --- */
     electionDayModel: 'voteCenters',
-    electionDayNote: 'You can vote at <strong>any Dallas County Vote Center</strong> on Election Day — both parties agreed to countywide voting for the runoff.',
+    electionDayNote: 'You can vote at <strong>any of 279 Dallas County Vote Centers</strong> on Election Day — both parties agreed to countywide voting for the runoff.',
     electionDayDemNote: 'Choose the <strong>Democratic runoff ballot</strong> when you arrive. (You cannot vote in the Democratic runoff if you voted in the Republican primary on March 3.)',
     electionDayFinderUrl: 'https://experience.arcgis.com/experience/2fe81f8ed7a1474fb75777b5a99e586a/page/Main-Page',
     electionDayFinderLabel: 'Find a Vote Center Near Me',
     electionDayHours: '7:00 AM – 7:00 PM',
-    electionDayLocationCount: null,
+    electionDayLocationCount: 279,
 
     /* --- Elections Office (for mail ballot applications) --- */
     electionsOfficeAddress: 'Dallas County Elections Department\n1460 Round Table Drive\nDallas, TX 75247',
